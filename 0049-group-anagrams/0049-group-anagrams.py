@@ -7,9 +7,6 @@ class Solution(object):
             if sorted_s in dict.keys():
                 dict[sorted_s].append(s)
             else:
-                dict[sorted_s] = []
-                dict[sorted_s].append(s)
-        result = []
-        for elem in dict:
-            result.append(dict[elem])
+                dict[sorted_s] = [s]
+        result = [dict[elem] for elem in dict] 
         return result
